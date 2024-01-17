@@ -1,8 +1,9 @@
 <template>
-  <div>
-    <p>{{ msg }}</p>
+  <div class="container">
+    <button type="button" class="btn btn-primary">{{ msg }}</button>
   </div>
 </template>
+
 
 <script>
 import axios from 'axios';
