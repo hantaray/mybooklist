@@ -15,6 +15,14 @@ CORS(app, resources={r'/*': {'origins': '*'}})
 def ping_pong():
     return jsonify('pong!')
 
+@app.route('/books', methods=['GET'])
+def all_books():
+    return jsonify({
+        'status': 'success',
+        'books': BOOKS
+    })
+
+
 
 if __name__ == '__main__':
     app.run()
