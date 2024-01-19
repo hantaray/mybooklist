@@ -39,12 +39,12 @@ BOOKS = [
         'read': True
     },
     {
-        'title': 'Kafka on the Shore,
+        'title': 'Kafka on the Shore',
         'author': 'Haruki Murakami',
         'read': False
     },
     {
-        'title': 'Lord of the Flies,
+        'title': 'Lord of the Flies',
         'author': 'William Golding',
         'read': False
     }
