@@ -18,3 +18,26 @@ def ping_pong():
 
 if __name__ == '__main__':
     app.run()
+
+BOOKS = [
+    {
+        'title': 'On the Road',
+        'author': 'Jack Kerouac',
+        'read': True
+    },
+    {
+        'title': 'The Hitchhiker\'s Guide to the Galaxy',
+        'author': 'Douglas Adams',
+        'read': True
+    },
+    {
+        'title': 'Kafka on the Shore,
+        'author': 'Haruki Murakami',
+        'read': False
+    },
+    {
+        'title': 'Lord of the Flies,
+        'author': 'William Golding',
+        'read': False
+    }
+]
