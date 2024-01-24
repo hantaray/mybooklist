@@ -1,2 +1,2 @@
 # mybooklist
- Booklist app made with Flask
+ Testing Vue.js and Flask for the myFlix-project
