@@ -4,6 +4,7 @@
       <div class="col-sm-10">
         <h1>Books</h1>
         <hr><br><br>
+        <alert :message=message v-if="showMessage"></alert>
         <button type="button" class="btn btn-success btn-sm" @click="toggleAddBookModal">
           Add Book
         </button>
@@ -83,6 +84,7 @@
 
 <script>
 import axios from 'axios';
+import Alert from './Alert.vue';
 
 export default {
   data() {
@@ -94,7 +96,12 @@ export default {
         read: [],
       },
       books: [],
+      message: '',
+      showMessage: false,
     };
+  },
+  components: {
+    alert: Alert,
   },
   methods: {
     addBook(payload) {
@@ -102,9 +109,10 @@ export default {
       axios.post(path, payload)
         .then(() => {
           this.getBooks();
+          this.message = 'Book added!';
+          this.showMessage = true;
         })
         .catch((error) => {
-
           console.log(error);
           this.getBooks();
         });
@@ -116,7 +124,6 @@ export default {
           this.books = res.data.books;
         })
         .catch((error) => {
-
           console.error(error);
         });
     },
